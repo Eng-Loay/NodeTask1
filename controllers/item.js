@@ -13,7 +13,7 @@ exports.filterItem = (req, res, next) => {
   const filteredItem = items.filter((items) => items.category == itemType);
   if (filteredItem.length > 0) {
     const itemname = filteredItem.map((item) => item.name);
-    return res.json(itemname);
+    return res.json(`Item Name =${itemname}`);
   } else {
     return res.json("No Item Found!");
   }
